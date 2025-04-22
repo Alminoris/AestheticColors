@@ -43,6 +43,5 @@
     "recipes": [
       "aestheticcolors:olive_concrete_powder"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

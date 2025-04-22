@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "carpet",
+  "key": {
+    "#": {
+      "item": "minecraft:white_carpet"
+    },
+    "$": {
+      "item": "aestheticcolors:burgundy_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "aestheticcolors:burgundy_carpet"
+  },
+  "show_notification": true
+}

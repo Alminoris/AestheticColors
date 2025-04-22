@@ -69,6 +69,5 @@
     "recipes": [
       "aestheticcolors:cognac_dye"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:teal_green_bed"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -69,6 +69,5 @@
     "recipes": [
       "aestheticcolors:olive_dye"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

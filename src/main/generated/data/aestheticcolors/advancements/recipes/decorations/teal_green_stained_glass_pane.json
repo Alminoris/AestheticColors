@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:teal_green_stained_glass_pane"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:olive_carpet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

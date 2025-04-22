@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:mint_bed"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

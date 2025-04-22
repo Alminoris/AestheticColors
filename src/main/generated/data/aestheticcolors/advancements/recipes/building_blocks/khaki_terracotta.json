@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:khaki_terracotta"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

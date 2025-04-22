@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:marsala_bed"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

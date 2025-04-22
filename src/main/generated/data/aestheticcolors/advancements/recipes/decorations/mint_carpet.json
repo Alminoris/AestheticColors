@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:mint_carpet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

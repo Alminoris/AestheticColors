@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:blue_iris_candle"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

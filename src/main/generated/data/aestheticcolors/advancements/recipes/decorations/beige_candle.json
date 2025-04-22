@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:beige_candle"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

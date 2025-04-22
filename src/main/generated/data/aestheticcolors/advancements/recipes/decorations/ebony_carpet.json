@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:ebony_carpet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

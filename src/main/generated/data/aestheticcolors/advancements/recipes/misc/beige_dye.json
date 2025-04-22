@@ -69,6 +69,5 @@
     "recipes": [
       "aestheticcolors:beige_dye"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

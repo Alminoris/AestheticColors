@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dyed_bed",
+  "ingredients": [
+    {
+      "item": "minecraft:white_bed"
+    },
+    {
+      "item": "aestheticcolors:aquamarine_dye"
+    }
+  ],
+  "result": {
+    "item": "aestheticcolors:aquamarine_bed"
+  }
+}

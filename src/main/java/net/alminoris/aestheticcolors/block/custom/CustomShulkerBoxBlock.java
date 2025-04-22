@@ -22,7 +22,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.ScreenHandler;
@@ -172,24 +171,6 @@ public class CustomShulkerBoxBlock extends BlockWithEntity
         }
 
         super.onBreak(world, pos, state, player);
-    }
-
-    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder)
-    {
-        BlockEntity blockEntity = (BlockEntity)builder.getOptional(LootContextParameters.BLOCK_ENTITY);
-        if (blockEntity instanceof CustomShulkerBoxBlockEntity shulkerBoxBlockEntity)
-        {
-            builder = builder.addDynamicDrop(CONTENTS_DYNAMIC_DROP_ID, (lootConsumer) ->
-            {
-                for(int i = 0; i < shulkerBoxBlockEntity.size(); ++i)
-                {
-                    lootConsumer.accept(shulkerBoxBlockEntity.getStack(i));
-                }
-
-            });
-        }
-
-        return super.getDroppedStacks(state, builder);
     }
 
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack)

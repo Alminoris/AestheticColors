@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:blue_iris_bed"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

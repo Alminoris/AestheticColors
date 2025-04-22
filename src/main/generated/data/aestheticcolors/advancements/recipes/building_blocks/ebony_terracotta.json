@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:ebony_terracotta"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

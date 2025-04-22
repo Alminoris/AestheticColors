@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:fuchsia_bed"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

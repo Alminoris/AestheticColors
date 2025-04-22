@@ -69,6 +69,5 @@
     "recipes": [
       "aestheticcolors:blue_iris_dye"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

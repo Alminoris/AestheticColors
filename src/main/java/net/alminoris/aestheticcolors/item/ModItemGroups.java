@@ -6,17 +6,14 @@ import net.alminoris.aestheticcolors.util.helper.BlockSetsHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups
 {
-    public static final ItemGroup ACOLS_TAB = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(AestheticColors.MOD_ID, "acolstab"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.acolstab"))
-                    .icon(() -> new ItemStack(ModItems.DYES.get("indigo"))).entries((displayContext, entries) ->
+    public static final ItemGroup ACOLS_TAB = FabricItemGroup.builder(new Identifier(AestheticColors.MOD_ID, "acolstab"))
+            .displayName(Text.translatable("itemgroup.acolstab"))
+            .icon(() -> new ItemStack(ModItems.DYES.get("indigo"))).entries((displayContext, entries) ->
                     {
                         for(String name : BlockSetsHelper.COLORS)
                         {
@@ -32,7 +29,7 @@ public class ModItemGroups
                             entries.add(ModBlocks.BEDS.get(name));
                             entries.add(ModBlocks.SHULKER_BOXES.get(name));
                         }
-                    }).build());
+                    }).build();
 
     public static void registerItemGroups()
     {

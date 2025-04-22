@@ -134,12 +134,10 @@ public class ModRecipeProvider extends FabricRecipeProvider
             offerStainedGlassPaneRecipe(recipeExporter, ModBlocks.STAINED_GLASS_PANES.get(name), ModBlocks.STAINED_GRASSES.get(name));
             offerCarpetRecipe(recipeExporter, ModBlocks.CARPETS.get(name), ModBlocks.WOOLS.get(name));
             offerBedRecipe(recipeExporter, ModBlocks.BEDS.get(name), ModBlocks.WOOLS.get(name));
+            offerWoolDyeingRecipe(recipeExporter, ModBlocks.WOOLS.get(name), ModItems.DYES.get(name));
+            offerCarpetDyeingRecipe(recipeExporter, ModBlocks.CARPETS.get(name), ModItems.DYES.get(name));
+            offerBedDyeingRecipe(recipeExporter, ModBlocks.BEDS.get(name), ModItems.DYES.get(name));
         }
-
-        offerDyeableRecipes(recipeExporter, list, list2, "wool");
-        offerDyeableRecipes(recipeExporter, list, list3, "carpet");
-        offerDyeableRecipes(recipeExporter, list, list4, "bed");
-        offerDyeableRecipes(recipeExporter, list, list5, "shulker_box");
 
         registerDye(recipeExporter, ModItems.DYES.get("indigo"), Items.BLUE_DYE, Items.PURPLE_DYE, Items.BLACK_DYE, Items.MAGENTA_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("beige"), Items.WHITE_DYE, Items.BROWN_DYE, Items.YELLOW_DYE, Items.LIGHT_GRAY_DYE);

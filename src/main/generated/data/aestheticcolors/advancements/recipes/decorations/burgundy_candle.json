@@ -30,6 +30,5 @@
     "recipes": [
       "aestheticcolors:burgundy_candle"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
