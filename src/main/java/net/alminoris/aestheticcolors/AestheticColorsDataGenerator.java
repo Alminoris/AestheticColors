@@ -1,5 +1,6 @@
 package net.alminoris.aestheticcolors;
 
+import net.alminoris.aestheticcolors.datagen.ModBlockTagProvider;
 import net.alminoris.aestheticcolors.datagen.ModLootTableProvider;
 import net.alminoris.aestheticcolors.datagen.ModModelProvider;
 import net.alminoris.aestheticcolors.datagen.ModRecipeProvider;
@@ -15,5 +16,6 @@ public class AestheticColorsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModBlockTagProvider::new);
 	}
 }

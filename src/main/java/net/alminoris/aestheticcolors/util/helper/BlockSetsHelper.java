@@ -4,9 +4,7 @@ public class BlockSetsHelper
 {
     public static final String[] COLORS =
             {
-                    "black", "brown", "gray", "light_gray",
-                    "white", "red", "orange", "yellow",
-                    "purple", "magenta", "pink", "blue",
-                    "cyan", "light_blue", "green", "lime"
+                    "indigo", "beige", "coral", "emerald_green", "blue_gray", "cognac", "ebony", "olive",
+                    "mint", "teal_green", "burgundy", "marsala", "fuchsia", "blue_iris", "khaki", "aquamarine"
             };
 }

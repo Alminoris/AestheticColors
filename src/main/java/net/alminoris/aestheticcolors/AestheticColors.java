@@ -1,6 +1,7 @@
 package net.alminoris.aestheticcolors;
 
 import net.alminoris.aestheticcolors.block.ModBlocks;
+import net.alminoris.aestheticcolors.block.entity.ModBlockEntities;
 import net.alminoris.aestheticcolors.item.ModItemGroups;
 import net.alminoris.aestheticcolors.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -20,5 +21,6 @@ public class AestheticColors implements ModInitializer
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
 		ModItemGroups.registerItemGroups();
+		ModBlockEntities.registerBlockEntities();
 	}
 }
