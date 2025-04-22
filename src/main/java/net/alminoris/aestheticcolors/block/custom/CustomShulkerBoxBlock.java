@@ -295,7 +295,7 @@ public class CustomShulkerBoxBlock extends BlockWithEntity
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state)
     {
         ItemStack itemStack = super.getPickStack(world, pos, state);
-        world.getBlockEntity(pos, BlockEntityType.SHULKER_BOX).ifPresent((blockEntity) ->
+        world.getBlockEntity(pos, ModBlockEntities.CUSTOM_SHULKER_BOX).ifPresent((blockEntity) ->
         {
             blockEntity.setStackNbt(itemStack);
         });

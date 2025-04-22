@@ -53,7 +53,7 @@ public class CustomShulkerBoxBlockEntity extends LootableContainerBlockEntity im
 
     public CustomShulkerBoxBlockEntity(@Nullable ModDyeColor color, BlockPos pos, BlockState state)
     {
-        super(BlockEntityType.SHULKER_BOX, pos, state);
+        super(ModBlockEntities.CUSTOM_SHULKER_BOX, pos, state);
         this.inventory = DefaultedList.ofSize(27, ItemStack.EMPTY);
         this.animationStage = CustomShulkerBoxBlockEntity.AnimationStage.CLOSED;
         this.cachedColor = color;
