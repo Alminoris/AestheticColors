@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -27,7 +28,7 @@ import net.minecraft.util.math.*;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.*;
-import net.minecraft.world.explosion.ExplosionBehavior;
+import net.minecraft.world.explosion.Explosion;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.Nullable;
 
@@ -65,53 +66,51 @@ public class CustomBedBlock extends HorizontalFacingBlock implements BlockEntity
         return blockState.getBlock() instanceof net.minecraft.block.BedBlock ? (Direction)blockState.get(FACING) : null;
     }
 
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    {
         if (world.isClient)
         {
             return ActionResult.CONSUME;
-        }
-        else {
-            if (state.get(PART) != BedPart.HEAD)
-            {
-                pos = pos.offset((Direction)state.get(FACING));
+        } else {
+            if (state.get(PART) != BedPart.HEAD) {
+                pos = pos.offset(state.get(FACING));
                 state = world.getBlockState(pos);
-                if (!state.isOf(this))
-                {
+                if (!state.isOf(this)) {
                     return ActionResult.CONSUME;
                 }
             }
 
-            if (!isBedWorking(world))
-            {
+            if (!isBedWorking(world)) {
                 world.removeBlock(pos, false);
                 BlockPos blockPos = pos.offset(((Direction)state.get(FACING)).getOpposite());
-                if (world.getBlockState(blockPos).isOf(this))
-                {
+                if (world.getBlockState(blockPos).isOf(this)) {
                     world.removeBlock(blockPos, false);
                 }
 
-                Vec3d vec3d = pos.toCenterPos();
-                world.createExplosion((Entity)null, world.getDamageSources().badRespawnPoint(vec3d), (ExplosionBehavior)null, vec3d, 5.0F, true, World.ExplosionSourceType.BLOCK);
+                world.createExplosion(
+                        null,
+                        DamageSource.badRespawnPoint(),
+                        null,
+                        (double)pos.getX() + 0.5,
+                        (double)pos.getY() + 0.5,
+                        (double)pos.getZ() + 0.5,
+                        5.0F,
+                        true,
+                        Explosion.DestructionType.DESTROY
+                );
                 return ActionResult.SUCCESS;
-            }
-            else if ((Boolean)state.get(OCCUPIED))
-            {
-                if (!this.wakeVillager(world, pos))
-                {
+            } else if ((Boolean)state.get(OCCUPIED)) {
+                if (!this.wakeVillager(world, pos)) {
                     player.sendMessage(Text.translatable("block.minecraft.bed.occupied"), true);
                 }
 
                 return ActionResult.SUCCESS;
-            }
-            else
-            {
-                player.trySleep(pos).ifLeft((reason) ->
-                {
-                    if (reason.getMessage() != null)
-                    {
+            } else {
+                player.trySleep(pos).ifLeft(reason -> {
+                    if (reason.getMessage() != null) {
                         player.sendMessage(reason.getMessage(), true);
                     }
-
                 });
                 return ActionResult.SUCCESS;
             }
@@ -205,7 +204,7 @@ public class CustomBedBlock extends HorizontalFacingBlock implements BlockEntity
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx)
     {
-        Direction direction = ctx.getHorizontalPlayerFacing();
+        Direction direction = ctx.getPlayer().getHorizontalFacing();
         BlockPos blockPos = ctx.getBlockPos();
         BlockPos blockPos2 = blockPos.offset(direction);
         World world = ctx.getWorld();

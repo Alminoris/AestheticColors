@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "carpet",
   "key": {
     "#": {
@@ -18,6 +17,5 @@
   "result": {
     "count": 8,
     "item": "aestheticcolors:blue_iris_carpet"
-  },
-  "show_notification": true
+  }
 }

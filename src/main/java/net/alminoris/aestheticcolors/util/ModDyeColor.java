@@ -1,10 +1,12 @@
 package net.alminoris.aestheticcolors.util;
 
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.StringIdentifiable;
-import net.minecraft.util.function.ValueLists;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.function.IntFunction;
 
 public enum ModDyeColor implements StringIdentifiable
@@ -26,7 +28,7 @@ public enum ModDyeColor implements StringIdentifiable
     KHAKI(14, "khaki", 15787660, ModMapColor.KHAKI),
     AQUAMARINE(15, "aquamarine", 8388564, ModMapColor.AQUAMARINE);
 
-    private static final IntFunction<ModDyeColor> BY_ID = ValueLists.createIdToValueFunction(ModDyeColor::getId, values(), ValueLists.OutOfBoundsHandling.ZERO);
+    private static final ModDyeColor[] VALUES = (ModDyeColor[]) Arrays.stream(values()).sorted(Comparator.comparingInt(ModDyeColor::getId)).toArray(ModDyeColor[]::new);
     public static final StringIdentifiable.Codec<ModDyeColor> CODEC = StringIdentifiable.createCodec(ModDyeColor::values);
     private final int id;
     private final String name;
@@ -60,8 +62,14 @@ public enum ModDyeColor implements StringIdentifiable
         return this.mapColor;
     }
 
-    public static ModDyeColor byId(int id) {
-        return (ModDyeColor)BY_ID.apply(id);
+    public static ModDyeColor byId(int id)
+    {
+        if (id < 0 || id >= VALUES.length)
+        {
+            id = 0;
+        }
+
+        return VALUES[id];
     }
 
     @Nullable

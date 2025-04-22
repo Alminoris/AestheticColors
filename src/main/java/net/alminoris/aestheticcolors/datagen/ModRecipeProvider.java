@@ -3,13 +3,12 @@ package net.alminoris.aestheticcolors.datagen;
 import net.alminoris.aestheticcolors.block.ModBlocks;
 import net.alminoris.aestheticcolors.item.ModItems;
 import net.alminoris.aestheticcolors.util.helper.BlockSetsHelper;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.book.RecipeCategory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,13 +16,13 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider
 {
-    public ModRecipeProvider(FabricDataOutput output)
+    public ModRecipeProvider(FabricDataGenerator dataGenerator)
     {
-        super(output);
+        super(dataGenerator);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> recipeExporter)
+    public void generateRecipes(Consumer<RecipeJsonProvider> recipeExporter)
     {
         List<Item> list = new ArrayList<>(List.of(
                 Items.BLACK_DYE,
@@ -159,7 +158,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
 
     private static void registerDye(Consumer<RecipeJsonProvider> recipeExporter, Item output, Item input1, Item input2, Item input3, Item input4)
     {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output, 4)
+        ShapelessRecipeJsonBuilder.create(output, 4)
                 .input(input1)
                 .input(input2)
                 .input(input3)

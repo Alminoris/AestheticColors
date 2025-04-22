@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
   "group": "stained_glass",
   "key": {
     "#": {
@@ -18,6 +17,5 @@
   "result": {
     "count": 8,
     "item": "aestheticcolors:olive_stained_glass"
-  },
-  "show_notification": true
+  }
 }

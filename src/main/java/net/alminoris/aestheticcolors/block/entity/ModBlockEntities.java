@@ -4,14 +4,13 @@ import net.alminoris.aestheticcolors.AestheticColors;
 import net.alminoris.aestheticcolors.block.ModBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class ModBlockEntities
 {
     public static final BlockEntityType<CustomBedBlockEntity> CUSTOM_BED =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(AestheticColors.MOD_ID, "custom_bed_be"),
+            Registry.register(Registry.BLOCK_ENTITY_TYPE, Identifier.of(AestheticColors.MOD_ID, "custom_bed_be"),
                     FabricBlockEntityTypeBuilder.create(CustomBedBlockEntity::new,
                             ModBlocks.BEDS.get("beige"),
                             ModBlocks.BEDS.get("blue_gray"),
@@ -31,7 +30,7 @@ public class ModBlockEntities
                             ModBlocks.BEDS.get("aquamarine")).build());
 
     public static final BlockEntityType<CustomShulkerBoxBlockEntity> CUSTOM_SHULKER_BOX =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(AestheticColors.MOD_ID, "custom_shulker_box_be"),
+            Registry.register(Registry.BLOCK_ENTITY_TYPE, Identifier.of(AestheticColors.MOD_ID, "custom_shulker_box_be"),
                     FabricBlockEntityTypeBuilder.create(CustomShulkerBoxBlockEntity::new,
                             ModBlocks.SHULKER_BOXES.get("indigo"),
                             ModBlocks.SHULKER_BOXES.get("beige"),

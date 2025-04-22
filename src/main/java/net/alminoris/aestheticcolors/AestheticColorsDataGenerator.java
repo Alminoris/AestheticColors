@@ -7,15 +7,14 @@ import net.alminoris.aestheticcolors.datagen.ModRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
-public class AestheticColorsDataGenerator implements DataGeneratorEntrypoint {
+public class AestheticColorsDataGenerator implements DataGeneratorEntrypoint
+{
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator)
 	{
-		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-
-		pack.addProvider(ModRecipeProvider::new);
-		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModLootTableProvider::new);
-		pack.addProvider(ModBlockTagProvider::new);
+		fabricDataGenerator.addProvider(ModModelProvider::new);
+		fabricDataGenerator.addProvider(ModRecipeProvider::new);
+		fabricDataGenerator.addProvider(ModLootTableProvider::new);
+		fabricDataGenerator.addProvider(ModBlockTagProvider::new);
 	}
 }

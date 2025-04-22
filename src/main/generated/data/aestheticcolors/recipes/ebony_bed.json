@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "bed",
   "key": {
     "#": {
@@ -16,6 +15,5 @@
   ],
   "result": {
     "item": "aestheticcolors:ebony_bed"
-  },
-  "show_notification": true
+  }
 }

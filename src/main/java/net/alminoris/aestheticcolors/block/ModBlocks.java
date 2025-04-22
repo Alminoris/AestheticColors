@@ -3,15 +3,16 @@ package net.alminoris.aestheticcolors.block;
 import net.alminoris.aestheticcolors.AestheticColors;
 import net.alminoris.aestheticcolors.block.custom.CustomBedBlock;
 import net.alminoris.aestheticcolors.block.custom.CustomShulkerBoxBlock;
+import net.alminoris.aestheticcolors.item.ModItemGroups;
 import net.alminoris.aestheticcolors.util.ModDyeColor;
 import net.alminoris.aestheticcolors.util.helper.BlockSetsHelper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -129,13 +130,13 @@ public class ModBlocks
     public static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(AestheticColors.MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, Identifier.of(AestheticColors.MOD_ID, name), block);
     }
 
     private static void registerBlockItem(String name, Block block)
     {
-        Registry.register(Registries.ITEM, Identifier.of(AestheticColors.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+        Registry.register(Registry.ITEM, Identifier.of(AestheticColors.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().group(ModItemGroups.ACOLS_TAB)));
     }
 
     public static void registerBlocks()
