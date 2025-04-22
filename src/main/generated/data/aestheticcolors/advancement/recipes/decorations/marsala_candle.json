@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_marsala_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aestheticcolors:marsala_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aestheticcolors:marsala_candle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_marsala_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aestheticcolors:marsala_candle"
+    ]
+  }
+}

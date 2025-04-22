@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "aestheticcolors:block/teal_green_wool"
+  }
+}

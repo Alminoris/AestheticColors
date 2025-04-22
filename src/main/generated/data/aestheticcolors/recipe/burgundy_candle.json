@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dyed_candle",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "aestheticcolors:burgundy_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticcolors:burgundy_candle"
+  }
+}

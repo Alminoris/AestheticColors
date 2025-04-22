@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
+  "textures": {
+    "pane": "aestheticcolors:block/fuchsia_stained_glass"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_three_candles",
+  "textures": {
+    "all": "aestheticcolors:block/blue_iris_candle",
+    "particle": "aestheticcolors:block/blue_iris_candle"
+  }
+}

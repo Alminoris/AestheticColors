@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "aestheticcolors:block/teal_green_concrete_powder"
+      },
+      {
+        "model": "aestheticcolors:block/teal_green_concrete_powder",
+        "y": 90
+      },
+      {
+        "model": "aestheticcolors:block/teal_green_concrete_powder",
+        "y": 180
+      },
+      {
+        "model": "aestheticcolors:block/teal_green_concrete_powder",
+        "y": 270
+      }
+    ]
+  }
+}

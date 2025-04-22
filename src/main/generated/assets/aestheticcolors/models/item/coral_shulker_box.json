@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "aestheticcolors:item/coral_shulker_box"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aestheticcolors:block/cognac_stained_glass"
+  }
+}

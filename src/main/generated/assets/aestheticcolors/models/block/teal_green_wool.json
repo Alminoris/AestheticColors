@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aestheticcolors:block/teal_green_wool"
+  }
+}

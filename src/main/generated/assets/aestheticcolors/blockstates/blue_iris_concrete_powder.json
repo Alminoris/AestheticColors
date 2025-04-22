@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "aestheticcolors:block/blue_iris_concrete_powder"
+      },
+      {
+        "model": "aestheticcolors:block/blue_iris_concrete_powder",
+        "y": 90
+      },
+      {
+        "model": "aestheticcolors:block/blue_iris_concrete_powder",
+        "y": 180
+      },
+      {
+        "model": "aestheticcolors:block/blue_iris_concrete_powder",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "aestheticcolors:block/blue_iris_wool"
+  }
+}

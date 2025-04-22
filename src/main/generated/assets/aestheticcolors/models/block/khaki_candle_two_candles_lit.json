@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_two_candles",
+  "textures": {
+    "all": "aestheticcolors:block/khaki_candle_lit",
+    "particle": "aestheticcolors:block/khaki_candle_lit"
+  }
+}

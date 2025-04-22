@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "aestheticcolors:block/burgundy_candle_cake"
+    },
+    "lit=true": {
+      "model": "aestheticcolors:block/burgundy_candle_cake_lit"
+    }
+  }
+}
