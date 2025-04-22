@@ -31,9 +31,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
             getOrCreateTagBuilder(BlockTags.TERRACOTTA)
                     .add(ModBlocks.TERRACOTTAS.get(name));
 
-            getOrCreateTagBuilder(BlockTags.CONCRETE_POWDER)
-                    .add(ModBlocks.CONCRETE_POWDERS.get(name));
-
             getOrCreateTagBuilder(BlockTags.CANDLES)
                     .add(ModBlocks.CANDLES.get(name));
 

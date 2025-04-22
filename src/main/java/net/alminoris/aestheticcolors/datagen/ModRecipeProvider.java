@@ -1,34 +1,29 @@
 package net.alminoris.aestheticcolors.datagen;
 
-import net.alminoris.aestheticcolors.AestheticColors;
 import net.alminoris.aestheticcolors.block.ModBlocks;
 import net.alminoris.aestheticcolors.item.ModItems;
 import net.alminoris.aestheticcolors.util.helper.BlockSetsHelper;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.RegistryWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider
 {
-    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture)
+    public ModRecipeProvider(FabricDataOutput output)
     {
-        super(output, registriesFuture);
+        super(output);
     }
 
     @Override
-    public void generate(RecipeExporter recipeExporter)
+    public void generate(Consumer<RecipeJsonProvider> recipeExporter)
     {
         List<Item> list = new ArrayList<>(List.of(
                 Items.BLACK_DYE,
@@ -146,25 +141,25 @@ public class ModRecipeProvider extends FabricRecipeProvider
         offerDyeableRecipes(recipeExporter, list, list4, "bed");
         offerDyeableRecipes(recipeExporter, list, list5, "shulker_box");
 
-        registerDye(recipeExporter, ModItems.DYES.get("indigo"), Items.BLUE_DYE, Items.PURPLE_DYE, Items.BLACK_DYE, Items.BLUE_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("beige"), Items.WHITE_DYE, Items.BROWN_DYE, Items.YELLOW_DYE, Items.WHITE_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("coral"), Items.RED_DYE, Items.ORANGE_DYE, Items.PINK_DYE, Items.RED_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("emerald_green"), Items.GREEN_DYE, Items.LIME_DYE, Items.CYAN_DYE, Items.GREEN_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("indigo"), Items.BLUE_DYE, Items.PURPLE_DYE, Items.BLACK_DYE, Items.MAGENTA_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("beige"), Items.WHITE_DYE, Items.BROWN_DYE, Items.YELLOW_DYE, Items.LIGHT_GRAY_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("coral"), Items.RED_DYE, Items.ORANGE_DYE, Items.PINK_DYE, Items.MAGENTA_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("emerald_green"), Items.GREEN_DYE, Items.LIME_DYE, Items.CYAN_DYE, Items.WHITE_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("blue_gray"), Items.BLUE_DYE, Items.GRAY_DYE, Items.LIGHT_GRAY_DYE, Items.BLACK_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("cognac"), Items.BROWN_DYE, Items.RED_DYE, Items.ORANGE_DYE, Items.BROWN_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("ebony"), Items.BLACK_DYE, Items.GRAY_DYE, Items.BROWN_DYE, Items.BLACK_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("olive"), Items.GREEN_DYE, Items.YELLOW_DYE, Items.BROWN_DYE, Items.GREEN_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("mint"), Items.LIME_DYE, Items.CYAN_DYE, Items.WHITE_DYE, Items.LIME_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("cognac"), Items.BROWN_DYE, Items.RED_DYE, Items.ORANGE_DYE, Items.BLACK_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("ebony"), Items.BLACK_DYE, Items.GRAY_DYE, Items.BROWN_DYE, Items.LIGHT_GRAY_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("olive"), Items.GREEN_DYE, Items.YELLOW_DYE, Items.BROWN_DYE, Items.GRAY_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("mint"), Items.LIME_DYE, Items.CYAN_DYE, Items.WHITE_DYE, Items.LIGHT_BLUE_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("teal_green"), Items.GREEN_DYE, Items.CYAN_DYE, Items.BLUE_DYE, Items.LIME_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("burgundy"), Items.RED_DYE, Items.PURPLE_DYE, Items.BROWN_DYE, Items.BLACK_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("marsala"), Items.BROWN_DYE, Items.RED_DYE, Items.PINK_DYE, Items.BROWN_DYE);
-        registerDye(recipeExporter, ModItems.DYES.get("fuchsia"), Items.PURPLE_DYE, Items.PINK_DYE, Items.MAGENTA_DYE, Items.PINK_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("marsala"), Items.BROWN_DYE, Items.RED_DYE, Items.PINK_DYE, Items.MAGENTA_DYE);
+        registerDye(recipeExporter, ModItems.DYES.get("fuchsia"), Items.PURPLE_DYE, Items.PINK_DYE, Items.MAGENTA_DYE, Items.LIGHT_BLUE_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("blue_iris"), Items.BLUE_DYE, Items.PURPLE_DYE, Items.LIGHT_BLUE_DYE, Items.MAGENTA_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("khaki"), Items.YELLOW_DYE, Items.BROWN_DYE, Items.WHITE_DYE, Items.LIGHT_GRAY_DYE);
         registerDye(recipeExporter, ModItems.DYES.get("aquamarine"), Items.CYAN_DYE, Items.LIGHT_BLUE_DYE, Items.LIME_DYE, Items.WHITE_DYE);
     }
 
-    private static void registerDye(RecipeExporter recipeExporter, Item output, Item input1, Item input2, Item input3, Item input4)
+    private static void registerDye(Consumer<RecipeJsonProvider> recipeExporter, Item output, Item input1, Item input2, Item input3, Item input4)
     {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output, 4)
                 .input(input1)

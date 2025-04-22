@@ -1,0 +1,108 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "bed",
+  "ingredients": [
+    {
+      "item": "aestheticcolors:fuchsia_dye"
+    },
+    [
+      {
+        "item": "minecraft:black_bed"
+      },
+      {
+        "item": "minecraft:blue_bed"
+      },
+      {
+        "item": "minecraft:brown_bed"
+      },
+      {
+        "item": "minecraft:cyan_bed"
+      },
+      {
+        "item": "minecraft:gray_bed"
+      },
+      {
+        "item": "minecraft:green_bed"
+      },
+      {
+        "item": "minecraft:light_blue_bed"
+      },
+      {
+        "item": "minecraft:light_gray_bed"
+      },
+      {
+        "item": "minecraft:lime_bed"
+      },
+      {
+        "item": "minecraft:magenta_bed"
+      },
+      {
+        "item": "minecraft:orange_bed"
+      },
+      {
+        "item": "minecraft:pink_bed"
+      },
+      {
+        "item": "minecraft:purple_bed"
+      },
+      {
+        "item": "minecraft:red_bed"
+      },
+      {
+        "item": "minecraft:yellow_bed"
+      },
+      {
+        "item": "minecraft:white_bed"
+      },
+      {
+        "item": "aestheticcolors:indigo_bed"
+      },
+      {
+        "item": "aestheticcolors:beige_bed"
+      },
+      {
+        "item": "aestheticcolors:coral_bed"
+      },
+      {
+        "item": "aestheticcolors:emerald_green_bed"
+      },
+      {
+        "item": "aestheticcolors:blue_gray_bed"
+      },
+      {
+        "item": "aestheticcolors:cognac_bed"
+      },
+      {
+        "item": "aestheticcolors:ebony_bed"
+      },
+      {
+        "item": "aestheticcolors:olive_bed"
+      },
+      {
+        "item": "aestheticcolors:mint_bed"
+      },
+      {
+        "item": "aestheticcolors:teal_green_bed"
+      },
+      {
+        "item": "aestheticcolors:burgundy_bed"
+      },
+      {
+        "item": "aestheticcolors:marsala_bed"
+      },
+      {
+        "item": "aestheticcolors:blue_iris_bed"
+      },
+      {
+        "item": "aestheticcolors:khaki_bed"
+      },
+      {
+        "item": "aestheticcolors:aquamarine_bed"
+      }
+    ]
+  ],
+  "result": {
+    "item": "aestheticcolors:fuchsia_bed"
+  }
+}

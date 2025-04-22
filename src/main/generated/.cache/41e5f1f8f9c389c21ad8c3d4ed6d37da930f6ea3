@@ -1,10 +1,9 @@
-// 1.21.1	2025-04-22T12:46:20.5292906	Aesthetic Colors/Tags for minecraft:block
-7b4adb6609cbf52d3ef5f830005b3b9c3aa08ceb data\minecraft\tags\block\wool_carpets.json
-e33f76e739f68e7cf4102423fab2cb746bdc5c8c data\minecraft\tags\block\terracotta.json
-7b41c44d71683f2198fbc09f8765eb21d2e1ed10 data\minecraft\tags\block\candle_cakes.json
-d2bb9614b4f7ed34adbabc9846107460ccc3ec49 data\minecraft\tags\block\candles.json
-a7b6812705cb7bddcaf5d1335053e23fffef87f7 data\minecraft\tags\block\impermeable.json
-b6d4daf95a0714c67d529a64d1cb276472e792bf data\minecraft\tags\block\beds.json
-0c12c825e334864a1c7a2fa105b07171b7741f2d data\minecraft\tags\block\wool.json
-d9b3fe8933315c1de4864aee902c7ffd4b87b3e3 data\minecraft\tags\block\concrete_powder.json
-0a69dad445a89d387b79f5c794416b4fdd6b4d21 data\minecraft\tags\block\shulker_boxes.json
+// 1.20.1	2025-04-22T15:30:09.2453659	Aesthetic Colors/Tags for minecraft:block
+95823dcb60585083040cff30dbd106cdfa148c3d data\minecraft\tags\blocks\wool.json
+a811bb9dc254bd9ad72e0ff82d4531e0ff949ee3 data\minecraft\tags\blocks\terracotta.json
+733a489db9fb439c61c09573a11b44b37788ecc1 data\minecraft\tags\blocks\wool_carpets.json
+89dace7c20f3956ce8f21a8cbad5cac9d6c7230d data\minecraft\tags\blocks\shulker_boxes.json
+c35454af77fa6eaff6d9306eb6aa80da02b2d7c7 data\minecraft\tags\blocks\candle_cakes.json
+94679b289acbc12ba20882d50b1893329d2f0d7e data\minecraft\tags\blocks\beds.json
+78106fa4ce4f4c9be5bc00c03630a409f3a241f5 data\minecraft\tags\blocks\candles.json
+765219de71374d95c157deadaf10c7fc16393daf data\minecraft\tags\blocks\impermeable.json

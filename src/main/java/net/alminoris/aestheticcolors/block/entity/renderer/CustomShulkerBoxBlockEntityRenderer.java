@@ -37,7 +37,7 @@ public class CustomShulkerBoxBlockEntityRenderer implements BlockEntityRenderer<
             BlockState blockState = shulkerBoxBlockEntity.getWorld().getBlockState(shulkerBoxBlockEntity.getPos());
             if (blockState.getBlock() instanceof CustomShulkerBoxBlock)
             {
-                direction = blockState.get(CustomShulkerBoxBlock.FACING);
+                direction = (Direction)blockState.get(CustomShulkerBoxBlock.FACING);
             }
         }
 
@@ -61,9 +61,9 @@ public class CustomShulkerBoxBlockEntityRenderer implements BlockEntityRenderer<
         matrixStack.translate(0.0F, -1.0F, 0.0F);
         ModelPart modelPart = this.model.getLid();
         modelPart.setPivot(0.0F, 24.0F - shulkerBoxBlockEntity.getAnimationProgress(f) * 0.5F * 16.0F, 0.0F);
-        modelPart.yaw = 270.0F * shulkerBoxBlockEntity.getAnimationProgress(f) * (float) (Math.PI / 180.0);
+        modelPart.yaw = 270.0F * shulkerBoxBlockEntity.getAnimationProgress(f) * 0.017453292F;
         VertexConsumer vertexConsumer = spriteIdentifier.getVertexConsumer(vertexConsumerProvider, RenderLayer::getEntityCutoutNoCull);
-        this.model.render(matrixStack, vertexConsumer, i, j);
+        this.model.render(matrixStack, vertexConsumer, i, j, 1.0F, 1.0F, 1.0F, 1.0F);
         matrixStack.pop();
     }
 }
